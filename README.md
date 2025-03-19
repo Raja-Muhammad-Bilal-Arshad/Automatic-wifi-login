@@ -1,5 +1,4 @@
 # Automatic-wifi-login
-This script solves the recent issue that the students of FAST-NUCES were having difficulty logging in
 
 
 # Windows Auto WiFi Login Script
