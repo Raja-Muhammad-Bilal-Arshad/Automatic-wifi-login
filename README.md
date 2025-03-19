@@ -30,15 +30,19 @@ powershell -ExecutionPolicy Bypass -File C:\Scripts\wifi-auto-login.ps1 setup
 - Enter the **Wi-Fi SSID(s)** (network names) when prompted.
 - Provide your **username** and **password** for authentication.
 - The configuration will be saved securely in `wifi-auto-login.conf`.
-
-## Running the Script
+- After that You have to open the notepad( where your credidentials are saved ) and remove the commas :
+```powershell
+notepad $env:USERPROFILE\wifi-auto-login.conf
+```
+## Running the Script ( Confirmation )
 To automatically log in when connected to the specified Wi-Fi, run:
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Scripts\wifi-auto-login.ps1
 ```
 This will check the network, extract the authentication token, and submit your credentials if needed.
 
-## Automating the Script (Recommended)
+
+## Automating the Script (Must Recommended)
 To run the script automatically when connecting to Wi-Fi, follow these steps:
 
 ### Task Scheduler Setup
