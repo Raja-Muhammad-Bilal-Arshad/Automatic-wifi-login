@@ -45,7 +45,11 @@ function Auto-Login {
     
     $ssidList = $config["SSID_LIST"].Split(",")
     $currentSSID = (netsh wlan show interfaces | Select-String "SSID" | ForEach-Object {
-        ($_ -match "SSID\s+:\s+(.+)") ? $matches[1].Trim() : $null
+        if ($_ -match "SSID\s+:\s+(.+)") { 
+            return $matches[1].Trim()
+        } else {
+            return $null
+        }
     }) | Where-Object { $_ }
     
     if ($ssidList -contains $currentSSID) {
