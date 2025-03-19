@@ -9,7 +9,7 @@ This script automates the login process for Wi-Fi networks that require authenti
 ## Prerequisites
 - Windows 10 or later
 - PowerShell (built-in on Windows)
-- Administrative privileges may be required for certain networks
+- Network should be by connected during the whole process
 
 ## Installation & Setup
 
@@ -30,17 +30,23 @@ powershell -ExecutionPolicy Bypass -File C:\Scripts\wifi-auto-login.ps1 setup
 - Enter the **Wi-Fi SSID(s)** (network names) when prompted.
 - Provide your **username** and **password** for authentication.
 - The configuration will be saved securely in `wifi-auto-login.conf`.
-- After that You have to open the notepad( where your credidentials are saved ) and remove the commas :
+- After that You have to open the notepad( where your credidentials are saved ) and remove the commas( " " around the your SSID) :
 ```powershell
 notepad $env:USERPROFILE\wifi-auto-login.conf
 ```
-## Running the Script ( Confirmation )
+## Running the Script ( Confirmation for the whole setup )
 To automatically log in when connected to the specified Wi-Fi, run:
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Scripts\wifi-auto-login.ps1
 ```
 This will check the network, extract the authentication token, and submit your credentials if needed.
 
+
+## ISSUE WITH ANYTHING IS MISSING
+Open the notepad and write your username , password and SSID manually:
+```powershell
+notepad $env:USERPROFILE\wifi-auto-login.conf
+```
 
 ## Automating the Script (Must Recommended)
 To run the script automatically when connecting to Wi-Fi, follow these steps:
