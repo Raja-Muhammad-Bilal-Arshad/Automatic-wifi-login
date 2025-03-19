@@ -42,7 +42,7 @@ powershell -ExecutionPolicy Bypass -File C:\Scripts\wifi-auto-login.ps1
 This will check the network, extract the authentication token, and submit your credentials if needed.
 
 
-## ISSUE WITH ANYTHING IS MISSING
+## Issue (If anything is missing)
 Open the notepad and write your username , password and SSID manually:
 ```powershell
 notepad $env:USERPROFILE\wifi-auto-login.conf
@@ -89,3 +89,13 @@ Developed for FAST-NU students to automate Wi-Fi authentication.
 
 ---
 Enjoy hassle-free Wi-Fi login! 🚀🔥 Let me know if you need any improvements or additional features.
+
+
+
+
+
+
+
+
+## WRITTEN BY:
+# BILAL ARSHAD
